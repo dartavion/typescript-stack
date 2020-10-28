@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+  <div>
+    <h4>Messages</h4>
+    {{messages$ | async | json}}
+  </div>
+  <input type="hidden" formControlName="authorEmail" >
+  <ul>
+    <li>
+      <label for="title">Title</label>
+      <input id="title" type="text" formControlName="title">
+    </li>
+    <li>
+      <label for="content">Content</label>
+      <input id="content" type="text" formControlName="content">
+    </li>
+    <li>
+      <button (click)="submit()" mat-raised-button color="primary">Submit</button>
+    </li>
+  </ul>
+</form>

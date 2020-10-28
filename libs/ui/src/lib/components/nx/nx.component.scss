@@ -1,0 +1,20 @@
+.angular-card {
+  width: 500px;
+  .angular-card__image--centered {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .angular-card__image {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #143055;
+    img {
+      width: 100px;
+      margin: 20px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@typescript-stack/api-interfaces';
+import { Message } from '@typescript-stack/types';
 
 @Component({
   selector: 'typescript-stack-root',
@@ -10,4 +10,5 @@ import { Message } from '@typescript-stack/api-interfaces';
 export class AppComponent {
   hello$ = this.http.get<Message>('/api/hello');
   constructor(private http: HttpClient) {}
+
 }

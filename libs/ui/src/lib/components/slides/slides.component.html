@@ -1,0 +1,24 @@
+<div class="action-buttons">
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle routerLink="/intro" value="bold">Intro</mat-button-toggle>
+    <mat-button-toggle routerLink="/stack" value="italic">Stack</mat-button-toggle>
+    <mat-button-toggle routerLink="/nx" value="underline">Nx</mat-button-toggle>
+    <mat-button-toggle routerLink="/angular" value="underline">Angular</mat-button-toggle>
+    <mat-button-toggle routerLink="/nestjs" value="underline">Nestjs</mat-button-toggle>
+    <mat-button-toggle routerLink="/prisma" value="underline">Prisma</mat-button-toggle>
+    <mat-button-toggle routerLink="/sqlite" value="underline">SQLite</mat-button-toggle>
+    <mat-button-toggle routerLink="/end" value="underline">End</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+<div class="slides">
+
+  <div class="slides-view">
+<!--    <div [@routeAnimations]="prepareRoute(outlet)">-->
+      <router-outlet #outlet="outlet"></router-outlet>
+<!--    </div>-->
+  </div>
+  <!--  <div class="action-buttons">-->
+  <!--    <button mat-raised-button color="primary" (click)="prev($event)">Previous</button>-->
+  <!--    <button mat-raised-button color="primary" (click)="next($event)">Next</button>-->
+  <!--  </div>-->
+</div>

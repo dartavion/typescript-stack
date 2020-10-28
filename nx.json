@@ -33,7 +33,13 @@
     "api": {
       "tags": []
     },
-    "api-interfaces": {
+    "ui": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
+    },
+    "types": {
       "tags": []
     }
   }

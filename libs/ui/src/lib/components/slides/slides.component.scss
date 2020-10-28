@@ -1,0 +1,16 @@
+.slides {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .slides-view {
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+}
+.action-buttons {
+  display: flex;
+  justify-content: center;
+}

@@ -1,9 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { Message } from '@typescript-stack/api-interfaces';
+import { Message } from '@typescript-stack/types';
 
 @Injectable()
 export class AppService {
   getData(): Message {
-    return { message: 'Welcome to api!' };
+    return {
+      title: 'Sweet',
+      value: 'This message is working'
+    };
   }
 }
