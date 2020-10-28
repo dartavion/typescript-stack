@@ -1,20 +1,31 @@
 <form [formGroup]="form">
-  <div>
-    <h4>Messages</h4>
-    {{messages$ | async | json}}
+  <div class="filtered">
+    <mat-form-field>
+      <mat-label>Favorite food</mat-label>
+      <input matInput #search type="text" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="filter(search.value)">Filter</button>
+    <div>{{filteredMessages$ | async | json}}</div>
   </div>
-  <input type="hidden" formControlName="authorEmail" >
-  <ul>
-    <li>
-      <label for="title">Title</label>
-      <input id="title" type="text" formControlName="title">
-    </li>
-    <li>
-      <label for="content">Content</label>
-      <input id="content" type="text" formControlName="content">
-    </li>
-    <li>
-      <button (click)="submit()" mat-raised-button color="primary">Submit</button>
-    </li>
-  </ul>
+  <mat-divider></mat-divider>
+  <div class="add-content">
+    <input type="hidden" formControlName="authorEmail">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" type="text" />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>Content</mat-label>
+      <input matInput formControlName="content" type="text" />
+    </mat-form-field>
+    <br />
+    <button (click)="submit()" mat-raised-button color="primary">Submit</button>
+    <div>
+      <div>
+        <h4>Messages</h4>
+        {{messages$ | async | json}}
+      </div>
+    </div>
+  </div>
 </form>
