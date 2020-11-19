@@ -1,7 +1,7 @@
 <form [formGroup]="form">
   <div class="filtered">
     <mat-form-field>
-      <mat-label>Favorite food</mat-label>
+      <mat-label>Find</mat-label>
       <input matInput #search type="text" />
     </mat-form-field>
     <button mat-raised-button color="primary" (click)="filter(search.value)">Filter</button>
@@ -9,6 +9,7 @@
   </div>
   <mat-divider></mat-divider>
   <div class="add-content">
+    <h3>Posts</h3>
     <input type="hidden" formControlName="authorEmail">
     <mat-form-field>
       <mat-label>Title</mat-label>
@@ -23,7 +24,6 @@
     <button (click)="submit()" mat-raised-button color="primary">Submit</button>
     <div>
       <div>
-        <h4>Messages</h4>
         {{messages$ | async | json}}
       </div>
     </div>
